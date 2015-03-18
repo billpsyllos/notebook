@@ -9,24 +9,36 @@
 # And be sure to use new-style password hashing:
 #   http://dev.mysql.com/doc/refman/5.0/en/old-client.html
 #
-default: &default
-  adapter: mysql2
-  encoding: utf8
-  pool: 5
-  username: root
-  password:
-  socket: /var/run/mysqld/mysqld.sock
+#default: &default
+  #adapter: mysql2
+  #encoding: utf8
+  #pool: 5
+  #username: root
+  #password:
+  #socket: /var/run/mysqld/mysqld.sock
+  
 
 development:
-  <<: *default
-  database: notebook_development
+ host: 127.0.0.1
+ adapter: mysql2
+ encoding: utf8
+ database: dev-notebookdb
+ pool: 5
+ timeout: 5000
+
+   
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
 test:
-  <<: *default
-  database: notebook_test
+  host: 127.0.0.1
+  adapter: mysql2
+  encoding: utf8
+  database: test-notebookdb
+  pool: 5
+  timeout: 5000
+
 
 # As with config/secrets.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
@@ -48,7 +60,10 @@ test:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
 production:
-  <<: *default
-  database: notebook_production
-  username: notebook
-  password: <%= ENV['NOTEBOOK_DATABASE_PASSWORD'] %>
+  host: 127.0.0.1
+  adapter: mysql2
+  encoding: utf8
+  database: prod-notebookdb
+  pool: 5
+  timeout: 5000
+   

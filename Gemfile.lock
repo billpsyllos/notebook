@@ -139,6 +139,7 @@ DEPENDENCIES
   coffee-rails (~> 4.0.0)
   jbuilder (~> 2.0)
   jquery-rails
+  json (~> 1.8.0)
   mysql2
   rails (= 4.1.8)
   rspec-rails (~> 2.0)
