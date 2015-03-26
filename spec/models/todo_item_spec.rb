@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe TodoItems do
+describe TodoItem do
   it { should belong_to(:todo_list) } 
  
 end
