@@ -15,8 +15,8 @@
     <br class="clear" />
   </div>
   
-  <% flash.each  do |message,type| %>
-  <div class="alert flash <%= message %>">
+  <% flash.each  do |type,message| %>
+  <div class="alert flash <%= type %>">
     <%= message %>
   </div>
   <% end %>
