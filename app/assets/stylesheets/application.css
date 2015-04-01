@@ -70,4 +70,7 @@ div.nav ul li a:hover {
   background: #aaa;
   color: #eee;
 }
+th {
+  text-align:left;
+}
 
